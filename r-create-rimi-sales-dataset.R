@@ -37,15 +37,6 @@ nb_of_products <- 100
 
 prod_list <- sample(nb_of_products)
 
-# Number of product groups
-# 
-# nb_of_prod_groups <- 4
-
-# Randomize an array of product groups, length = nb. of products
-# 
-# prod_group_list <- sample(1:nb_of_prod_groups, nb_of_products, replace=TRUE)
-
-
 # Create product subsets for stores of different sizes
 
 prod_list_hyp <- prod_list
@@ -63,15 +54,9 @@ date_column <- c(rep(dates, n_exp*length(prod_list_exp)), rep(dates, n_hyp*lengt
 
 weekday_num <- as.numeric(format(date_column,"%u"))
 
-# Generate alpha weekdays array from date_column
-
-# weekday_alpha <- weekdays(as.Date(date_column), abbreviate = TRUE)
-
 # Generate numeric month array from date_column
 
 month_num <- as.numeric(format(date_column,"%m"))
-
-# Generate alpha month array from date_column
 
 store_id <- vector()
 prod_id <- vector()
